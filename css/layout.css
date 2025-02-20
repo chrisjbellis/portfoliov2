@@ -73,6 +73,7 @@ body {
         text-decoration: none;
         font-weight: 100;
         font-size: .9em;
+        letter-spacing: .05em;
 
         display: block; /* Make the a tag take up the entire li */
         
@@ -218,6 +219,14 @@ h1 {
     font-size: 2em;
     font-weight: lighter;
     margin-top: 0px;
+    margin-bottom: 12.5px;
+}
+
+h2{
+    color: #9d9d9d;
+    font-weight: 200;
+    font-size: 1.5em;
+    margin-top: 0px;
 }
 
 .description {
@@ -225,6 +234,21 @@ h1 {
     font-size: 1em;
     font-weight: lighter;
     margin-bottom: 30px;
+    letter-spacing: .025em;
+}
+
+.description a {
+    color: white;
+    font-weight: 400 !important;
+    text-decoration: solid;
+    background-color: #3a3a3a;
+    
+    padding: 1px 5px 1px 7px;
+}
+
+.description a:hover{
+    color: #9d9d9d;
+    background-color: #000000;
 }
 
 .p-image {
