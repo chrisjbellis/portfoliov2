@@ -1,0 +1,348 @@
+body {
+    background-color: #0e1720;
+    font-family: Nunito;
+    margin: 0;
+
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    
+}
+
+
+.header-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+    align-items: center;
+    
+
+
+}
+
+.burger-icon {
+    display: none; /* Hide the burger icon by default */
+    font-size: 30px;
+    cursor: pointer;
+    padding: 30px 30px 0px 30px;
+    color: white;
+    transform: translateY(-2.5px);
+}
+
+.burger-icon.active {
+    color: #9d9d9d;
+}
+
+.burger-icon:hover {
+    color: #9d9d9d;
+}
+
+.logo-container {
+
+    
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.4em;
+    letter-spacing: .1em;
+    white-space: nowrap;
+
+    margin: 0px;
+    padding: 0px 30px 0px 35px;    
+
+}
+
+.title {
+    
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.nav-container {
+
+    display: flex;
+    margin-right: 5px;
+    flex-wrap: wrap;
+
+    a {
+        color: #9d9d9d;
+        text-decoration: none;
+        font-weight: 100;
+        font-size: .9em;
+
+        display: block; /* Make the a tag take up the entire li */
+        
+        padding: 20px 30px;
+        
+        box-sizing: border-box; /* Include padding in the a tag's dimensions */
+
+    }
+    
+    a:hover {
+        color: #fff;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0px;
+        
+    }
+
+    
+
+}
+
+.pf-title {
+    color: #9d9d9d !important;
+    font-weight: 100;
+}
+
+.content-container {
+
+    max-width: 100%;
+    overflow: hidden;
+    height: 100%;
+    margin: 0px 30px;
+    left: 0;
+    right: 0;
+    
+}
+
+.content-container2 {
+    margin: 0px 35px !important;
+} /*  reduces container width only for portfolio pages */
+
+.portfolio-container  {
+
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+
+    max-width: 100%;
+
+    img{
+        width: 100%;
+        
+        flex-shrink: 0;
+    }
+
+}
+
+.pt-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.pt-item {
+   
+    width: 250px;
+
+    flex: 1 1 calc(25% - 20px);
+    
+    margin: 5px;
+    flex-grow: 1;
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.pt-item-rec::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.pt-item-rec {
+
+    width: 250px;
+
+    flex: 1 1 calc(50% - 20px);
+    
+    margin: 5px;
+    flex-grow: 1;
+    aspect-ratio: 1 / .5;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.pt-item:hover::before{
+opacity: 50%;
+}
+
+.pt-item-rec:hover::before{
+    opacity: 50%;
+}
+
+.pt-item img {
+    
+    width: 100%;
+    height: auto;
+    display: block;
+    
+}
+
+.pt-item a {
+    
+    display: block !important;
+    
+}
+
+h1 {
+    color: white;
+    font-size: 2em;
+    font-weight: lighter;
+    margin-top: 0px;
+}
+
+.description {
+    color: white;
+    font-size: 1em;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+
+.p-image {
+    max-width: 100%;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 920px) {
+    body {
+        padding: 0px; /* Adjust padding for smaller screens */
+    }
+    .header-container {
+        padding: 25px 0px 25px 0px !important;
+    }
+
+    .content-container {
+        margin: 0px 15px !important;
+    }
+
+    .content-container2 {
+        margin: 0px 20px !important;
+    } /*  reduces container width only for portfolio pages */
+
+    .logo-container {
+        padding-top: -50px !important;
+        font-size: 1.2em !important;
+        padding-left: 20px !important; 
+    }
+
+    .burger-icon {
+        display: block !important; /* Show the burger icon */
+        
+        padding: 0px 20px 0px 0px !important;
+    }
+    .nav-container {
+        display: none !important; /* Hide the navigation menu */
+        flex-direction: column; /* Stack the menu items vertically */
+        width: 100%;
+        background-color: #0e1720;
+        position: absolute;
+        top: 60px; /* Adjust based on your header height */
+        left: 0;
+        z-index: 1;
+     
+    }
+    .nav-container ul {
+        flex-direction: column; /* Stack the menu items vertically */
+        margin-bottom: 40px !important;
+        
+    }
+    .nav-container li {
+        
+        margin-top: 20px !important;
+        align-items: center !important;
+    }
+    .nav-container.show {
+        display: flex !important; /* Show the navigation menu when toggled */
+    }
+
+    .nav-container a{
+        padding: 0px 30px 0px 0px !important;
+        display: block  !important; /* Make the a tag take up the entire li */
+        padding: 20px 22px  !important;
+        box-sizing: border-box  !important; /* Include padding in the a tag's dimensions */
+    }
+
+    .pt-item {
+        flex: 1 1 calc(50% - 20px) !important; /* Maintain at least two portfolio items per row */
+    }
+
+    .pt-item-rec {
+
+        width: 250px;
+    
+        flex: 1 1 100% !important; /* Ensure each pt-item-rec takes up 100% of the container */
+        
+        margin: 5px;
+        flex-grow: 1;
+        aspect-ratio: 1 / .5;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+    
+    }
+
+
+}
+
+
+/* Media query for larger screens */
+@media (min-width: 1600px) {
+    body {
+        padding: 0px 80px; /* Adjust padding for larger screens */
+    }
+
+}
+
+@media (max-width: 800px) {
+    .logo-container{
+        font-size: 1.2em !important;
+    }
+
+    .burger-icon {
+        transform: translateY(-2.75px);
+    }
+
+}
+
+@media (max-width: 380px) {
+    .logo-container{
+        font-size: 1em !important;
+        padding: 5px 0px 0px 30px; 
+    }
+
+    .burger-icon {
+        transform: translateY(-1.25px);
+    }
+}
+
+
+

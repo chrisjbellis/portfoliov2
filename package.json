@@ -1,0 +1,22 @@
+{
+  "name": "portfoliov2",
+  "version": "1.0.0",
+  "description": "Fresh portfolio site build to strengthen coding skills",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/badmandookie/portfoliov2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/badmandookie/portfoliov2/issues"
+  },
+  "homepage": "https://github.com/badmandookie/portfoliov2#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
