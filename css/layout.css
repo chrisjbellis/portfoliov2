@@ -254,7 +254,7 @@ h2{
 }
 
 .p-image {
-    max-width: 100%;
+    width: 100%;
 }
 
 /* Media query for smaller screens */
